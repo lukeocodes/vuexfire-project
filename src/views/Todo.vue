@@ -9,6 +9,10 @@
 
 <script>
 export default {
+  destroy() {
+    this.$store.dispatch('unbindTodos')
+  },
+
   mounted() {
     this.$store.dispatch('bindTodos')
   },
