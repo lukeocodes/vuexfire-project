@@ -13,6 +13,10 @@ export default new Vuex.Store({
     ...vuexfireMutations,
   },
   actions: {
+    addTodo: firestoreAction((context, data) => {
+      db.collection('todos')
+        .add(data)
+    }),
     updateTodo: firestoreAction(( context , data) => {
       db.collection('todos')
         .doc(data.id)
