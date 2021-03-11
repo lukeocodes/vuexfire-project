@@ -10,7 +10,7 @@
 
 <script>
 export default {
-  destroy() {
+  beforeDestroy() {
     this.$store.dispatch("unbindTodos")
   },
 
